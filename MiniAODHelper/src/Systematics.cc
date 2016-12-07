@@ -224,7 +224,7 @@ std::string sysType::GetJECUncertaintyLabel(const sysType type) {
   if( type == JESRelativeJERHFup   || type == JESRelativeJERHFdown   ) return "RelativeJERHF";  
   if( type == JESRelativeFSRup     || type == JESRelativeFSRdown     ) return "RelativeFSR";    
   if( type == JESRelativeStatFSRup || type == JESRelativeStatFSRdown ) return "RelativeStatFSR";
-  if( type == JESRelativeStatEC2up || type == JESRelativeStatEC2down ) return "RelativeStatEC2";
+  if( type == JESRelativeStatEC2up || type == JESRelativeStatEC2down ) return "RelativeStatFSR"; // return "RelativeStatEC2";
   if( type == JESRelativeStatECup  || type == JESRelativeStatECdown  ) return "RelativeStatEC"; 
   if( type == JESRelativeStatHFup  || type == JESRelativeStatHFdown  ) return "RelativeStatHF"; 
   if( type == JESRelativePtBBup    || type == JESRelativePtBBdown    ) return "RelativePtBB";   
