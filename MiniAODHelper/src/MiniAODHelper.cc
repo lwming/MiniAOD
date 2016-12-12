@@ -2038,9 +2038,9 @@ bool MiniAODHelper::PassesMVAidCuts(const pat::Electron& el, float cut0, float c
 //     std::cout<<el.pt()<<" "<<el.eta()<<" "<<category<<" "<<value<<std::endl;
     // the categories 0 1 and 2 are for low pT electrons.
     switch(category){
-	case 0: pass=false; break;
-	case 1: pass=false; break;
-	case 2: pass=false; break;
+	case 0: pass=value>cut0; break;
+	case 1: pass=value>cut1; break;
+	case 2: pass=value>cut2; break;
         case 3: pass=value>cut0; break;
         case 4: pass=value>cut1; break;
         case 5: pass=value>cut2; break;
