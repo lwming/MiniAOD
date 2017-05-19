@@ -33,7 +33,7 @@ sysType::sysType sysType::get(const std::string& name) {
   if( name == "JESSinglePionECALup"  ) return JESSinglePionECALup; 
   if( name == "JESSinglePionHCALup"  ) return JESSinglePionHCALup; 
   if( name == "JESFragmentationup"   ) return JESFragmentationup;  
-  if( name == "JESTimePtup"          ) return JESTimePtup;          	    	 
+  if( name == "JESTimePtEtaup"          ) return JESTimePtEtaup;          	    	 
   if( name == "JESFlavorQCDup"       ) return JESFlavorQCDup;
 
   if( name == "JESdown"                ) return JESdown;
@@ -62,7 +62,7 @@ sysType::sysType sysType::get(const std::string& name) {
   if( name == "JESSinglePionECALdown"  ) return JESSinglePionECALdown; 
   if( name == "JESSinglePionHCALdown"  ) return JESSinglePionHCALdown; 
   if( name == "JESFragmentationdown"   ) return JESFragmentationdown;  
-  if( name == "JESTimePtdown"          ) return JESTimePtdown;          	    	 
+  if( name == "JESTimePtEtadown"          ) return JESTimePtEtadown;          	    	 
   if( name == "JESFlavorQCDdown"       ) return JESFlavorQCDdown;
 
   throw cms::Exception("InvalidUncertaintyName") << "No uncertainty with name '" << name << "'";
@@ -102,7 +102,7 @@ std::string sysType::toString(const sysType type) {
   if( type == JESSinglePionECALup  ) return "JESSinglePionECALup"; 
   if( type == JESSinglePionHCALup  ) return "JESSinglePionHCALup"; 
   if( type == JESFragmentationup   ) return "JESFragmentationup";  
-  if( type == JESTimePtup          ) return "JESTimePtup";          	    	 
+  if( type == JESTimePtEtaup          ) return "JESTimePtEtaup";          	    	 
   if( type == JESFlavorQCDup       ) return "JESFlavorQCDup";
 
   if( type == JESdown                ) return "JESdown";
@@ -131,7 +131,7 @@ std::string sysType::toString(const sysType type) {
   if( type == JESSinglePionECALdown  ) return "JESSinglePionECALdown"; 
   if( type == JESSinglePionHCALdown  ) return "JESSinglePionHCALdown"; 
   if( type == JESFragmentationdown   ) return "JESFragmentationdown";  
-  if( type == JESTimePtdown          ) return "JESTimePtdown";          	    	 
+  if( type == JESTimePtEtadown          ) return "JESTimePtEtadown";          	    	 
   if( type == JESFlavorQCDdown       ) return "JESFlavorQCDdown";
 
   throw cms::Exception("InvalidUncertaintyType") << "No uncertainty with index '" << type << "'";
@@ -167,7 +167,7 @@ bool sysType::isJECUncertaintyUp(const sysType type) {
   if( type == JESSinglePionECALup  ) return true;		
   if( type == JESSinglePionHCALup  ) return true;
   if( type == JESFragmentationup   ) return true;
-  if( type == JESTimePtup          ) return true;
+  if( type == JESTimePtEtaup          ) return true;
   if( type == JESFlavorQCDup       ) return true;			
 
   else return false;
@@ -201,7 +201,7 @@ bool sysType::isJECUncertaintyDown(const sysType type) {
   if( type == JESSinglePionECALdown  ) return true;		
   if( type == JESSinglePionHCALdown  ) return true;
   if( type == JESFragmentationdown   ) return true;
-  if( type == JESTimePtdown          ) return true;
+  if( type == JESTimePtEtadown          ) return true;
   if( type == JESFlavorQCDdown       ) return true;			
 
   else return false;
@@ -238,7 +238,7 @@ std::string sysType::GetJECUncertaintyLabel(const sysType type) {
   if( type == JESSinglePionECALup  || type == JESSinglePionECALdown  ) return "SinglePionECAL"; 
   if( type == JESSinglePionHCALup  || type == JESSinglePionHCALdown  ) return "SinglePionHCAL"; 
   if( type == JESFragmentationup   || type == JESFragmentationdown   ) return "Fragmentation";  
-  if( type == JESTimePtup          || type == JESTimePtdown          ) return "TimePt";	    	 
+  if( type == JESTimePtEtaup          || type == JESTimePtEtadown          ) return "TimePtEta";	    	 
   if( type == JESFlavorQCDup       || type == JESFlavorQCDdown       ) return "FlavorQCD";      
 
   else return "";

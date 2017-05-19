@@ -37,9 +37,9 @@ namespace sysType {
     JESSinglePionECALup,		
     JESSinglePionHCALup,
     JESFragmentationup,
-    JESTimePtup,
+    /* JESTimePtup, */
     JESFlavorQCDup,			
-
+    JESTimePtEtaup,
     // individual JEC uncertainties down
     JESPileUpDataMCdown,		
     JESPileUpPtRefdown,
@@ -66,9 +66,9 @@ namespace sysType {
     JESSinglePionECALdown,		
     JESSinglePionHCALdown,
     JESFragmentationdown,
-    JESTimePtdown,
+    /* JESTimePtdown, */
     JESFlavorQCDdown,			
-
+    JESTimePtEtadown,
     // JER uncertainty
     JERup,			
     JERdown,
